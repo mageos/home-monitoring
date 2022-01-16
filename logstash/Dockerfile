@@ -1,4 +1,4 @@
-FROM docker.elastic.co/logstash/logstash:7.16.3
+FROM docker.elastic.co/logstash/logstash:${ELKSTACK_VERSION}
 
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf && \
   bin/logstash-plugin install logstash-output-syslog
