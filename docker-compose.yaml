@@ -1,4 +1,4 @@
-version: '2.2'
+version: '3.8'
 services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:${ELKSTACK_VERSION}
@@ -19,6 +19,7 @@ services:
       - 9300:9300
     networks:
       - elastic
+    user: 'elasticsearch'
 
   kibana:
     image: docker.elastic.co/kibana/kibana:${ELKSTACK_VERSION}
