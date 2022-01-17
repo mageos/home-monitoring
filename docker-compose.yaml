@@ -45,6 +45,7 @@ services:
         ELKSTACK_VERSION: ${ELKSTACK_VERSION}
     ports:
       - 51514:51514
+      - 51514:51514/udp
     volumes:
       - logstash_pipelines:/usr/share/logstash/pipeline/
     networks:
