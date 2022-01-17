@@ -42,7 +42,7 @@ services:
     build:
       context: ./logstash
       args:
-        ELKSTACK_VERSION: ${ELKSTACK_VERSION}
+        - ELKSTACK_VERSION=${ELKSTACK_VERSION}
     ports:
       - 51514:51514
       - 51514:51514/udp
