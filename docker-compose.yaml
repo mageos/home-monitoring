@@ -8,7 +8,6 @@ services:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - xpack.security.enabled=true
     ulimits:
       memlock:
         soft: -1
@@ -33,8 +32,6 @@ services:
       SERVERNAME: localhost
       ELASTICSEARCH_URL: http://elasticsearch:9200
       ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
-      ELASTICSEARCH_USERNAME: kibana_system
-      ELASTICSEARCH_PASSWORD: kj6ZuIwU6sXfbs3CUOXw
     networks:
       - elastic
 
