@@ -34,7 +34,7 @@ services:
       ELASTICSEARCH_URL: http://elasticsearch:9200
       ELASTICSEARCH_HOSTS: '["http://elasticsearch:9200"]'
       ELASTICSEARCH_USERNAME: kibana_system
-      ELASTICSEARCH_PASSWORD: kibana@oslocal.elastic
+      ELASTICSEARCH_PASSWORD: kj6ZuIwU6sXfbs3CUOXw
     networks:
       - elastic
 
