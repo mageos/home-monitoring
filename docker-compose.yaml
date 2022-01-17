@@ -23,6 +23,8 @@ services:
 
   kibana:
     image: docker.elastic.co/kibana/kibana:${ELKSTACK_VERSION}
+    depends_on:
+      - elasticsearch
     container_name: kibana
     ports:
       - 5601:5601
@@ -33,6 +35,8 @@ services:
       - elastic
 
   logstash:
+    depends_on:
+      - elasticsearch
     container_name: logstash
     build:
       context: ./logstash
